@@ -26,7 +26,19 @@ const data = [
     alamat: 'Balong'
   }
 ]
-export async function GET(NextRequest) {
-  console.log(NextRequest)
+export async function GET(request) {
+  const { searchParams } = new URL(request.url)
+  const id = searchParams.get('id')
+  console.log(id)
+  if (id) {
+    const searchId = data.find(item => item.id == id)
+    if (searchId === undefined) {
+      return NextResponse.json({
+        status: 404,
+        message: 'Data Not Found'
+      })
+    }
+    return NextResponse.json({ status: 200, message: 'Succes', data: searchId })
+  }
   return NextResponse.json({ status: 200, message: 'Succes', data: data })
 }
