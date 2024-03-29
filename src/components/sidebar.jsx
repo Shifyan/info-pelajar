@@ -18,14 +18,12 @@ export default function SidebarComponent() {
     >
       <Sidebar.Items>
         <Sidebar.ItemGroup>
-          <Sidebar.Item href='#' icon={HiChartPie}>
+          <Sidebar.Item href='/dashboard' icon={HiChartPie}>
             Dashboard
           </Sidebar.Item>
-          <Sidebar.Collapse icon={HiShoppingBag} label='E-commerce'>
-            <Sidebar.Item href='#'>Products</Sidebar.Item>
-            <Sidebar.Item href='#'>Sales</Sidebar.Item>
-            <Sidebar.Item href='#'>Refunds</Sidebar.Item>
-            <Sidebar.Item href='#'>Shipping</Sidebar.Item>
+          <Sidebar.Collapse icon={HiShoppingBag} label='Data Pelajar'>
+            <Sidebar.Item href='/dashboard/lihatdata'>Lihat Data</Sidebar.Item>
+            <Sidebar.Item href='/dashboard/ubahdata'>Ubah Data</Sidebar.Item>
           </Sidebar.Collapse>
           <Sidebar.Item href='#' icon={HiInbox}>
             Inbox
@@ -37,10 +35,7 @@ export default function SidebarComponent() {
             Products
           </Sidebar.Item>
           <Sidebar.Item href='#' icon={HiArrowSmRight}>
-            Sign In
-          </Sidebar.Item>
-          <Sidebar.Item href='#' icon={HiTable}>
-            Sign Up
+            Log Out
           </Sidebar.Item>
         </Sidebar.ItemGroup>
       </Sidebar.Items>
