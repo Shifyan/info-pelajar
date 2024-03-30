@@ -5,9 +5,16 @@ async function fetchData() {
 
 export default async function LihatData() {
   const data = await fetchData()
+  data.data.map(e => {
+    // console.log(e.first_name)
+  })
   return (
     <>
-      <ul>{data.data[0]}</ul>
+      <ul>
+        {data.data.map(e => {
+          return <li key={e.id}>{e.first_name}</li>
+        })}
+      </ul>
     </>
   )
 }
