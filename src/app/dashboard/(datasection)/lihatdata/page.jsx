@@ -1,7 +1,13 @@
-export default function LihatData() {
+async function fetchData() {
+  const res = await fetch('http://localhost:3000/api/pelajar')
+  return res.json()
+}
+
+export default async function LihatData() {
+  const data = await fetchData()
   return (
     <>
-      <h1>Hello from Lihat Data</h1>
+      <ul>{data.data[0]}</ul>
     </>
   )
 }
