@@ -14,7 +14,7 @@ export default function SidebarComponent() {
   return (
     <Sidebar
       aria-label='Sidebar with multi-level dropdown example'
-      className=' h-screen'
+      className='fixed top-0 left-0 h-full'
     >
       <Sidebar.Items>
         <Sidebar.ItemGroup>

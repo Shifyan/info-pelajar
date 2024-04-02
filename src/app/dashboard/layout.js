@@ -8,7 +8,7 @@ export default function DashboardLayout({ children }) {
     <section>
       <div className='flex flex-row'>
         <SidebarComponent />
-        {children}
+        <div className='flex-1 ml-64 p-5 w-full'>{children}</div>
       </div>
     </section>
   )
